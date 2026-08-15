@@ -1,10 +1,10 @@
 services:
-  - type: static_site
+  - type: web
     name: my_flutter_app
-    env: static
+    runtime: static
     buildCommand: bash ./build.sh
     staticPublishPath: build/web
-    autoDeploy: true
+    autoDeployTrigger: commit
     envVars:
       - key: SUPABASE_URL
         sync: false
