@@ -16,10 +16,12 @@ This guide deploys the app as a **static site** on Render's free tier
   `--dart-define`, and falls back to the bundled `assets/.env` file for
   local development.
 
-> Note: `assets/.env` is git-ignored, so on Render the values must come from
-> the service's environment variables (see Step 4). In a web app, the keys
-> embedded in the compiled JS are visible to anyone anyway — keep the
-> Supabase anon key read-only and lock down the database with Row Level
+> Note: `assets/.env` is committed with **placeholder** values only (so the
+> pubspec asset exists for builds). Real values are injected on Render via the
+> service's environment variables (see Step 4). For local development, paste
+> your real anon key into `assets/.env` but do not commit it. In a web app,
+> the keys embedded in the compiled JS are visible to anyone anyway — keep
+> the Supabase anon key read-only and lock down the database with Row Level
 > Security (RLS).
 
 ## Prerequisites

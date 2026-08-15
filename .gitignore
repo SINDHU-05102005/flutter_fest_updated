@@ -49,6 +49,9 @@ app.*.map.json
 .env
 .env.local
 .env.*.local
+# Placeholder committed so the pubspec asset exists for builds; real values
+# are injected via Render env vars (--dart-define), never committed.
+!assets/.env
 
 # OS specific files
 .DS_Store
