@@ -1,7 +1,0 @@
-services:
-  - type: static_site
-    name: my-app-web
-    env: static
-    staticPublishPath: .
-    autoDeploy: true
-    pullRequestPreviewsEnabled: true
